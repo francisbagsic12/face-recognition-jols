@@ -1,0 +1,64 @@
+#register-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(90deg, red, black); */
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      rgb(34, 33, 33) 45%,
+      rgba(247, 247, 247, 0)
+    ),
+    url(src/assets/image/jols_logo.png);
+
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+  background-position: center;
+
+  overflow: hidden;
+}
+form {
+  width: 100%;
+
+  height: 100%;
+}
+#card {
+  width: 100%;
+  /* background-color: rgba(19, 16, 16, 0.342); */
+
+  border-radius: 54px;
+  background: #201d1d;
+  box-shadow: 27px 27px 72px #121111, -27px -27px 72px #2e2929;
+  color: black;
+}
+
+#submitBtn {
+  width: 100%;
+  border-radius: 10px;
+  height: 60px;
+  background-color: green;
+  border: none;
+  transition-property: transition, transform;
+}
+#submitBtn:hover {
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px rgb(26, 148, 32);
+
+  transform: scale(1.06);
+  perspective: 2000;
+  animation: name 1s ease;
+}
+.inpot {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgba(196, 191, 191, 0.699);
+  border-radius: 54px;
+  /* background: linear-gradient(145deg, #221f1f, #1d1a1a); */
+  box-shadow: 9px 9px 18px #141212, -9px -9px 18px #2c2828;
+}
+#row {
+  justify-content: space-between;
+}
