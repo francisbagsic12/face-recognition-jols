@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import multer from "multer";
 import path from "path";
+import connectToDB from "./database/db.js";
 import { error } from "console";
 const app = express();
 app.use(cors());
@@ -41,8 +42,14 @@ const uploadFaces = multer({
 //   }
 // });
 app.use(cors());
+
 app.get("/faceCamera", (req, res) => {
   return res.send("this is a server");
+});
+app.get("/getUser", async (req, res) => {
+  const db = await connectToDB();
+  const [user] = await db.query("select * from user");
+  return res.status(500).send({ mess: user });
 });
 
 app.post("/registerStudent", (req, res) => {
